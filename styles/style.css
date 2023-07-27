@@ -1,1 +1,401 @@
-/* место для вашего кода */
+body {
+    font-weight: 400;
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+.header {
+    height: 109px;
+    width: 100%;
+    max-width: 1340px;
+    margin: 92px 49px 92px 51px;
+    display: grid;
+    grid-template-columns: 388px 209px 148px 355px 240px;
+    grid-template-rows: 5px 38px 21px 38px 3px 4px;
+    grid-template-areas:
+    ". . logo . ."
+    ". . logo . contacts"
+    "menu . logo . contacts"
+    ". . logo . info"
+    ". . logo . ."
+    ". . . . .";
+}
+
+.header__menu {
+    grid-area: menu;
+    white-space: nowrap;
+}
+
+.links__list {
+    font-size: 18px;
+    line-height: normal;
+}
+
+.header__links-list {
+    display: flex;
+    gap: 32px;
+    list-style: circle;
+}
+
+.header__links-list-item_no-bullet {
+    list-style-type: none;
+}
+
+.header__link_active .header__link {
+    text-decoration: none;
+}
+
+.header__links-list-item {
+    text-decoration: none;
+    border-bottom: 1px solid black;
+    padding-bottom: 1px;
+}
+
+.header__logo {
+    grid-area: logo;
+    display: block;
+    width: 148px;
+}
+
+.contacts {
+    grid-area: contacts;
+    font-size: 18px;
+    line-height: 24.3px;
+}
+
+.email {
+    white-space: nowrap;
+    position: relative;
+    text-decoration: none;
+}
+
+.email::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 1px;
+    background-color: black; 
+}
+
+.phone-number {
+    position: relative;
+    white-space: nowrap;
+    text-decoration: none;
+}
+  
+.phone-number::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 0.5px;
+    background-color: black;
+}
+
+.address {
+    font-size: 18px;
+    line-height: 24.3px;
+    font-style: normal;
+}
+
+.header__address {
+    margin: 55px 20px 60px 1100px;
+    width: 240px;
+}
+
+.cover {
+    position: relative;
+    height: 757px;
+    background-image: url('../images/cover.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgb(3, 71, 173);
+}
+
+.cover__title {
+    position: relative;
+    z-index: 2;
+    color: #FFF;
+    font-size: 100px;
+    font-weight: 700;
+    letter-spacing: 30px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.overlay {
+    position: absolute;
+    z-index: 1;
+    background-color: rgb(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+} 
+
+.aligned-text {
+    display: block;
+}
+
+.letter-spacing-extended {
+    letter-spacing: 60px;
+}
+
+.no-letter-spacing {
+    letter-spacing: 0;
+}
+
+.aligned-text_left {
+    text-align: left;
+    line-height: 115%;
+    padding: 183px 50px 10px 50px;
+}
+
+.aligned-text_center {
+    text-align: center;
+    padding: 0 0 3px 0;
+}
+
+.aligned-text_right {
+    text-align: right;
+    padding: 0 50px 135px 0;
+}
+
+.cover__description {
+    color: #FFF;
+    font-size: 22px;
+    line-height: 28px;
+    text-transform: uppercase;
+}
+
+.cover__description-text {
+    position: relative;
+    z-index: 2;
+    display: inline;
+    padding-bottom: 62px;
+    padding-left: 422px;
+   
+}
+
+.bet-button {
+    position: relative;
+    z-index: 2;
+    display: inline;
+    border: 1px solid white;
+    margin-bottom: 100px;
+    margin-left: 81px;
+    padding: 12px 32px 12px 32px;
+}
+
+
+.lots {
+    margin: 180px 50px 181px;
+}
+
+.lots__title {
+    color: #000;
+    font-size: 40px;
+    line-height: normal;
+    text-transform: uppercase;
+    padding: 0 1179px 27px 40px;
+}
+
+.lots__card-list {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.lots__card-list-item {
+    display: flex;
+    flex-direction: column;
+    width: 430px;
+    height: 450px;
+    flex-grow: 1;
+}
+
+.lots_card_item_1 {
+    position: relative;
+    display: flex;
+    gap: 202px;
+    padding: 50px 40px;
+    background-image: url('../images/card-lot-01.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgb(136, 228, 115);
+}
+
+.lots_card_item_2 {
+    position: relative;
+    display: flex;
+    gap: 30px;
+    padding: 50px 40px;
+    background-image: url('../images/card-lot-02.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgb(223, 61, 21);
+}
+
+.lots_card_item_3 {
+    position: relative;
+    display: flex;
+    gap: 84px;
+    padding: 50px 40px;
+    background-image: url('../images/card-lot-03.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgb(233, 214, 48);
+}
+
+.card__title {
+    position: relative;
+    z-index: 2;
+    color: #FFF;
+    font-size: 22px;
+    line-height: 120%;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+}
+
+.card__text {
+    position: relative;
+    z-index: 2;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.lots__look-more-link {
+    position: relative;
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 30px 1108px 2px 40px;
+}
+
+.lots__look-more-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+}
+
+.about{
+    display: grid;
+    grid-template-columns: 95px 240px 95px 25px 885px;
+    grid-template-rows: 100px 140px 248px;
+    grid-template-areas:
+    ". auction_logo . . ."
+    ". auction_logo . . auction_info"
+    ". . . . auction_info";
+    margin: 0 50px 180px 50px;
+}
+
+.about__title {
+    color: #000;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.about__logo {
+    position: relative;
+    grid-area: auction_logo;
+    top: 0;
+    left: 0;
+}
+
+.auction-logo-image {
+    position: relative;
+    inset: 63px 46px;
+    z-index: 1;
+    width: 148px;
+    height: 114px;
+}
+
+.auction-logo-background {
+    z-index: 0;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+.auction__info {
+    grid-area: auction_info;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.auction_texts {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.auction_text {
+    color: #000;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.footer {
+    display: flex;
+    width: 1340px;
+    height: 97px;
+    margin-left: 50px;
+    margin-bottom: 90px;
+}
+
+.footer-contacts {
+    margin-right: 356px;
+    width: 240px;
+}
+
+.footer__menu {
+    white-space: nowrap;
+}
+
+.footer__menu-list {
+    list-style: none;
+    text-align: center;
+    margin-right: 360px;
+}
+
+.socials {
+    display: flex;
+    gap: 48px;
+    height: 48px;
+}
+
+.footer__links-list-item_no-bullet {
+    list-style-type: none;
+}
+
+.footer__link_active .footer__link {
+    text-decoration: none;
+}
+
+.footer__links-list-item {
+    text-decoration: none;
+    border-bottom: 1px solid black;
+    padding-bottom: 0.3px;
+}
