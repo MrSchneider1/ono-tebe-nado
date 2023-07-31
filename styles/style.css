@@ -1,32 +1,14 @@
-body {
-    font-weight: 400;
-    background-color: rgb(255, 255, 255);
-    height: 100%;
-    max-width: 1440px;
-    width: 100%;
-    margin: 0 auto;
-  }
-
 .header {
-    height: 109px;
     width: 100%;
     max-width: 1340px;
     margin: 92px 49px 92px 51px;
     display: grid;
-    grid-template-columns: 388px 209px 148px 355px 240px;
-    grid-template-rows: 5px 38px 21px 38px 3px 4px;
-    grid-template-areas:
-    ". . logo . ."
-    ". . logo . contacts"
-    "menu . logo . contacts"
-    ". . logo . info"
-    ". . logo . ."
-    ". . . . .";
+    grid-template-columns: 597px 148px 595px;
 }
 
 .header__menu {
-    grid-area: menu;
     white-space: nowrap;
+    padding: 43px 0 45px;
 }
 
 .links__list {
@@ -44,26 +26,30 @@ body {
     list-style-type: none;
 }
 
-.header__link_active .header__link {
+.header__link_active {
     text-decoration: none;
 }
 
-.header__links-list-item {
+.header__link_not_active {
     text-decoration: none;
     border-bottom: 1px solid black;
     padding-bottom: 1px;
 }
 
 .header__logo {
-    grid-area: logo;
-    display: block;
     width: 148px;
+    height: 105px;
+    margin: 0 0 4px;
 }
 
-.contacts {
-    grid-area: contacts;
+.address {
     font-size: 18px;
     line-height: 24.3px;
+    font-style: normal;
+}
+
+.header__address {
+    padding: 5px 0 7px 355px;
 }
 
 .email {
@@ -78,7 +64,7 @@ body {
     left: 0;
     bottom: -1px;
     width: 100%;
-    height: 1px;
+    height: 0.5px;
     background-color: black; 
 }
 
@@ -86,6 +72,7 @@ body {
     position: relative;
     white-space: nowrap;
     text-decoration: none;
+
 }
   
 .phone-number::after {
@@ -98,24 +85,14 @@ body {
     background-color: black;
 }
 
-.address {
-    font-size: 18px;
-    line-height: 24.3px;
-    font-style: normal;
-}
-
-.header__address {
-    margin: 55px 20px 60px 1100px;
-    width: 240px;
-}
-
 .cover {
+    width: 100%;
+    max-width: 1440px;
     position: relative;
-    height: 757px;
-    background-image: url('../images/cover.jpg');
+    background: url('./images/cover.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: rgb(3, 71, 173);
+    background-position: center;
 }
 
 .cover__title {
@@ -126,6 +103,7 @@ body {
     font-weight: 700;
     letter-spacing: 30px;
     text-transform: uppercase;
+    line-height: 100%;
     margin: 0;
 }
 
@@ -156,43 +134,51 @@ body {
 .aligned-text_left {
     text-align: left;
     line-height: 115%;
-    padding: 183px 50px 10px 50px;
+    padding: 165px 50px 20px 50px;
 }
 
 .aligned-text_center {
     text-align: center;
-    padding: 0 0 3px 0;
+    padding: 0 0 20px 0;
 }
 
 .aligned-text_right {
     text-align: right;
-    padding: 0 50px 135px 0;
+    padding: 0 50px 135px 50px;
+}
+
+.cover__bottom {
+    display: flex;
+    margin: 0;
 }
 
 .cover__description {
+    position: relative;
+    z-index: 2;
     color: #FFF;
     font-size: 22px;
     line-height: 28px;
     text-transform: uppercase;
+    padding: 12px 0 62px 422px;
+    word-spacing: 16.5px;
+    margin: 0;
 }
 
-.cover__description-text {
-    position: relative;
-    z-index: 2;
-    display: inline;
-    padding-bottom: 62px;
-    padding-left: 422px;
-   
+.description-word-scaping-extended {
+    word-spacing: 18px;
 }
 
 .bet-button {
     position: relative;
     z-index: 2;
-    display: inline;
     border: 1px solid white;
-    margin-bottom: 100px;
-    margin-left: 81px;
-    padding: 12px 32px 12px 32px;
+    margin: 0 0 50px 75px;
+    padding: 12px 32px;
+    background-color: transparent;
+    color: #FFF;
+    font-family: Raleway;
+    line-height: 100%;
+    word-spacing: normal;
 }
 
 
@@ -205,7 +191,13 @@ body {
     font-size: 40px;
     line-height: normal;
     text-transform: uppercase;
-    padding: 0 1179px 27px 40px;
+    padding: 0 0 27px 40px;
+}
+
+.lots__title-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
 }
 
 .lots__card-list {
@@ -216,41 +208,32 @@ body {
 }
 
 .lots__card-list-item {
-    display: flex;
-    flex-direction: column;
-    width: 430px;
-    height: 450px;
-    flex-grow: 1;
-}
-
-.lots_card_item_1 {
     position: relative;
     display: flex;
-    gap: 202px;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 430px;
+    min-height: 450px;
+    flex-grow: 1;
     padding: 50px 40px;
-    background-image: url('../images/card-lot-01.jpg');
+}
+
+.card_type_film {
+    background: url('./images/card-lot-01.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-color: rgb(136, 228, 115);
 }
 
-.lots_card_item_2 {
-    position: relative;
-    display: flex;
-    gap: 30px;
-    padding: 50px 40px;
-    background-image: url('../images/card-lot-02.jpg');
+.card_type_book {
+    background: url('./images/card-lot-02.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-color: rgb(223, 61, 21);
 }
 
-.lots_card_item_3 {
-    position: relative;
-    display: flex;
-    gap: 84px;
-    padding: 50px 40px;
-    background-image: url('../images/card-lot-03.jpg');
+.card_type_picture {
+    background: url('./images/card-lot-03.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-color: rgb(233, 214, 48);
@@ -262,7 +245,8 @@ body {
     color: #FFF;
     font-size: 22px;
     line-height: 120%;
-    text-decoration-line: underline;
+    text-decoration: underline;
+    text-underline-offset: 3px;
     text-transform: uppercase;
 }
 
@@ -275,13 +259,17 @@ body {
     line-height: 120%;
 }
 
+.lots__look-more-link-container {
+    display: flex;
+}
+
 .lots__look-more-link {
     position: relative;
     text-decoration: none;
     display: block;
     font-size: 20px;
     font-weight: 400;
-    margin: 30px 1108px 2px 40px;
+    margin: 30px 0 2px 40px;
 }
 
 .lots__look-more-link::after {
@@ -295,14 +283,45 @@ body {
 }
 
 .about{
-    display: grid;
-    grid-template-columns: 95px 240px 95px 25px 885px;
-    grid-template-rows: 100px 140px 248px;
-    grid-template-areas:
-    ". auction_logo . . ."
-    ". auction_logo . . auction_info"
-    ". . . . auction_info";
     margin: 0 50px 180px 50px;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 430px 885px;
+    gap: 25px;
+}
+
+.about__logo {
+    position: relative;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding: 0 95px;
+    margin: 0 0 248px 0;
+}
+
+.auction-logo-image {
+    position: relative;
+    inset: 63px 46px;
+    z-index: 2;
+    width: 148px;
+    height: 114px;
+}
+
+.auction-logo-background {
+    z-index: 0;
+    position: absolute;
+    width: 240px;
+    height: 240px;
+}
+
+.auction__info {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    margin: 100px 0 0 0;
 }
 
 .about__title {
@@ -310,39 +329,6 @@ body {
     font-size: 40px;
     font-weight: 700;
     text-transform: uppercase;
-}
-
-.about__logo {
-    position: relative;
-    grid-area: auction_logo;
-    top: 0;
-    left: 0;
-}
-
-.auction-logo-image {
-    position: relative;
-    inset: 63px 46px;
-    z-index: 1;
-    width: 148px;
-    height: 114px;
-}
-
-.auction-logo-background {
-    z-index: 0;
-    top: 0;
-    left: 0;
-    position: absolute;
-    width: 240px;
-    height: 240px;
-    background-color: #000;
-    border-radius: 50%;
-}
-
-.auction__info {
-    grid-area: auction_info;
-    display: flex;
-    flex-direction: column;
-    gap: 100px;
 }
 
 .auction_texts {
@@ -358,31 +344,35 @@ body {
 }
 
 .footer {
-    display: flex;
-    width: 1340px;
-    height: 97px;
-    margin-left: 50px;
-    margin-bottom: 90px;
+    display: grid;
+    grid-template-columns: 596px 149px 595px;
+    margin: 0 0 90px 50px;
+
 }
 
-.footer-contacts {
-    margin-right: 356px;
+.footer__address {
     width: 240px;
-}
-
-.footer__menu {
-    white-space: nowrap;
+    grid-column-start: 1;
+    grid-column-end: 2;
 }
 
 .footer__menu-list {
+    grid-column-start: 2;
+    grid-column-end: 3;
     list-style: none;
     text-align: center;
-    margin-right: 360px;
 }
 
-.socials {
+.footer__social_list {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    padding: 0 0 0 355px;
     display: flex;
     gap: 48px;
+    list-style-type: none;
+}
+
+.social_li_img {
     height: 48px;
 }
 
@@ -390,11 +380,11 @@ body {
     list-style-type: none;
 }
 
-.footer__link_active .footer__link {
+.footer__link_active {
     text-decoration: none;
 }
 
-.footer__links-list-item {
+.footer__link_not_active {
     text-decoration: none;
     border-bottom: 1px solid black;
     padding-bottom: 0.3px;
