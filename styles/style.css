@@ -3,7 +3,8 @@
     max-width: 1340px;
     margin: 92px 49px 92px 51px;
     display: grid;
-    grid-template-columns: 597px 148px 595px;
+    grid-template-columns: 1fr auto 1fr;
+    justify-items: start;
 }
 
 .header__menu {
@@ -46,10 +47,12 @@
     font-size: 18px;
     line-height: 24.3px;
     font-style: normal;
+    width: 240px;
 }
 
 .header__address {
-    padding: 5px 0 7px 355px;
+    padding: 5px 0 7px 0;
+    justify-self: end;
 }
 
 .email {
@@ -148,7 +151,9 @@
 }
 
 .cover__bottom {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-items: end;
     margin: 0;
 }
 
@@ -159,24 +164,21 @@
     font-size: 22px;
     line-height: 28px;
     text-transform: uppercase;
-    padding: 12px 0 62px 422px;
-    word-spacing: 16.5px;
+    padding: 12px 0 62px 0px;
+    word-spacing: 17px;
     margin: 0;
-}
-
-.description-word-scaping-extended {
-    word-spacing: 18px;
+    justify-self: end;
 }
 
 .bet-button {
     position: relative;
     z-index: 2;
     border: 1px solid white;
-    margin: 0 0 50px 75px;
+    margin: 0 50px 50px 78px;
     padding: 12px 32px;
     background-color: transparent;
     color: #FFF;
-    font-family: Raleway;
+    font-family: Raleway, sans-serif;
     line-height: 100%;
     word-spacing: normal;
 }
@@ -205,17 +207,22 @@
     flex-direction: row;
     gap: 25px;
     flex-wrap: wrap;
+    list-style-type: none;
 }
 
 .lots__card-list-item {
+    flex-grow: 1;
+    width: 430px;
+}
+
+.lots__card-link {
     position: relative;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    width: 430px;
     min-height: 450px;
-    flex-grow: 1;
     padding: 50px 40px;
+    text-decoration: none;
 }
 
 .card_type_film {
@@ -278,17 +285,14 @@
     left: 0;
     bottom: -1px;
     width: 100%;
-    height: 1px;
+    height: 0.5px;
     background-color: black;
 }
 
 .about{
     margin: 0 50px 180px 50px;
-}
-
-.about-container {
     display: grid;
-    grid-template-columns: 430px 885px;
+    grid-template-columns: 1fr 2fr;
     gap: 25px;
 }
 
@@ -345,7 +349,8 @@
 
 .footer {
     display: grid;
-    grid-template-columns: 596px 149px 595px;
+    grid-template-columns: 1fr auto 1fr;
+    justify-items: start;
     margin: 0 0 90px 50px;
 
 }
@@ -366,7 +371,7 @@
 .footer__social_list {
     grid-column-start: 3;
     grid-column-end: 4;
-    padding: 0 0 0 355px;
+    justify-self: end;
     display: flex;
     gap: 48px;
     list-style-type: none;
